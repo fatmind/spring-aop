@@ -1,4 +1,4 @@
-package aop.annotation.custom2;
+package aop.custom.annotation.pojo;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,8 +7,12 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface LogAnnotation {
-
-	public String logName();
+public @interface  Statistical {
+	
+	/**
+	 * 业务场景
+	 * @return String
+	 */
+	String key() default "default";
 	
 }

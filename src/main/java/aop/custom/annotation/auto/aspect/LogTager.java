@@ -1,4 +1,4 @@
-package aop.annotation.custom;
+package aop.custom.annotation.auto.aspect;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,12 +7,8 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface  Statistical {
+public @interface LogTager {
 
-	String key();
-	
-	int value() default 1;
-	
-	String type() default "memory";
+	public String logName();
 	
 }

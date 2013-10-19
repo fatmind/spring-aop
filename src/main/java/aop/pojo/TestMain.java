@@ -13,7 +13,7 @@ public class TestMain {
 	public static void main(String[] args) {
 		
 		ApplicationContext context = 
-			new ClassPathXmlApplicationContext("com/taobao/aop/pojo/app-pojo.xml");
+			new ClassPathXmlApplicationContext("aop/pojo/app-pojo.xml");
 		Performer piano = (Performer)context.getBean("performer");
 		piano.perform();
 	}

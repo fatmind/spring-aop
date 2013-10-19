@@ -10,7 +10,7 @@
 			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
 			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
-	<bean id="audience" class="com.taobao.aop.pojo.Audience"/>
+	<bean id="audience" class="aop.pojo.Audience"/>
 	
 	<aop:config>
 		<aop:aspect ref="audience">
@@ -20,7 +20,7 @@
 		</aop:aspect>
 	</aop:config>
 	
-	<bean id="performer" class="com.taobao.aop.Pianist"/> 
+	<bean id="performer" class="aop.Pianist"/> 
 
 	
 	

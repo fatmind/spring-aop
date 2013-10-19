@@ -1,4 +1,4 @@
-package aop.basic;
+package aop.proxybeanfactory;
 
 import java.lang.reflect.Method;
 

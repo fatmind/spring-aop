@@ -8,12 +8,14 @@ import java.lang.reflect.Proxy;
 import proxy.ItemService;
 
 
+
+
 public class ItemServiceProxyAuto {
 
 	public ItemService proxy;
 	public ItemService realService;
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public ItemServiceProxyAuto(ItemService itemService) {
 		try {
 			this.realService = itemService;

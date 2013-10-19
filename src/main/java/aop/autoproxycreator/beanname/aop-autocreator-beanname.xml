@@ -10,11 +10,22 @@
 			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
 			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 	 
-	<aop:aspectj-autoproxy/>
-	
-	<bean id="audience" class="aop.args.joinpoint.Audience"/>
-	
-	<bean id="performer" class="aop.Pianist"/>
+	 <bean id="pianist" class="aop.Pianist" />
+	 
+	 <bean id="audienceInterceptor" class="aop.autoproxycreator.beanname.Audience" />
+	 
+     <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+        <property name="beanNames">
+            <list>
+            	<value>pianist</value>
+            </list>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>audienceInterceptor</value > 
+            </list>
+        </property>
+    </bean>
 	
 	
 

@@ -12,7 +12,7 @@
 
 	
 	 
-	<bean id="audience" class="aop.basic.Audience"/>
+	<bean id="audience" class="aop.proxybeanfactory.Audience"/>
 	
 	<bean id="pointcut" class="org.springframework.aop.aspectj.AspectJExpressionPointcut">
 		<property name="expression" value="execution(* *.perform(..))"/>

@@ -10,19 +10,19 @@
 			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
 
-	<bean id="aspectStatistical"
-		class="aop.annotation.custom.AspectStatistical"></bean>
+	<bean id="statisticalAdvice" class="aop.custom.annotation.pojo.StatisticalAdvice" />
 	
 	<!-- 为什么： @annotation(statistical) 正确，
 				 @annotation(Statistical) 、 @annotation(aop.annotation.custom.Statistical) 错误   ？-->
 	
 	<aop:config>
-		<aop:aspect id="monitor" ref="aspectStatistical">
+		<aop:aspect ref="statisticalAdvice">
 			<aop:around pointcut="@annotation(statistical)" method="incrOne" />
+			<aop:after  pointcut="@annotation(statistical)" method="clear"/>
 		</aop:aspect>
 	</aop:config>
 
-	<bean id="auctionService" class="aop.annotation.custom.AuctionServiceImpl" />
+	<bean id="auctionService" class="aop.custom.annotation.pojo.AuctionService" />
 	
 
 

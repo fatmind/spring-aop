@@ -1,6 +1,6 @@
 package aop;
 
-public class Pianist implements Performer{
+public class Pianist implements Performer {
 
 	public void perform() {
 		System.out.println(" ..... ");
